@@ -124,14 +124,14 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
+  m_DynamicOccludee: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2119156}
-  - {fileID: 2197008}
+  - {fileID: 2100000, guid: 1237a1d05c4fb2d4b99061ab01140e1c, type: 2}
+  - {fileID: 2100000, guid: 1237a1d05c4fb2d4b99061ab01140e1c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
