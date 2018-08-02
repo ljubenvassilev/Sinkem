@@ -79,6 +79,7 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
+          <e p="AIShipScript.cs" t="Include" />
           <e p="BallScript.cs" t="Include" />
           <e p="CameraFollowScript.cs" t="Include" />
           <e p="GameManager.cs" t="Include" />
