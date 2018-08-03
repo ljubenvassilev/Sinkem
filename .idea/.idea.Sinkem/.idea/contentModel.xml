@@ -105,6 +105,16 @@
           <e p="CameraFollowScript.cs" t="Include" />
           <e p="EnemyHealthScript.cs" t="Include" />
           <e p="GameManager.cs" t="Include" />
+          <e p="PandaBTScripts" t="Include">
+            <e p="Attack.BT.txt" t="Include" />
+            <e p="Cannon.txt" t="Include" />
+            <e p="LookAround.BT.txt" t="Include" />
+            <e p="Patrol.BT.txt" t="Include" />
+            <e p="RobotGuardAi.BT.txt" t="Include" />
+            <e p="RunAway.BT.txt" t="Include" />
+            <e p="Status.BT.txt" t="Include" />
+            <e p="Travel.BT.txt" t="Include" />
+          </e>
           <e p="PlayerController.cs" t="Include" />
           <e p="ShootCannonScript.cs" t="Include" />
         </e>

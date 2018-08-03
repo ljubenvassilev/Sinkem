@@ -1,34 +1,48 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Panda;
 
 public class ShootCannonScript : MonoBehaviour
 {
-	public Transform fireTransform;
-	public GameObject ball;
-	
-	// Use this for initialization
-	void Start () {
-				
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-	
-	public void OpenFire()
-	{
-		InvokeRepeating(nameof(Fire), 0f, 1f);
-	}
+	public Transform FireTransform;
+	public GameObject Ball;
+	public Transform Target;
+	public float RotationSpeed = 5f;
+	public float RotationAccuracy = 0f;
+	public float ShootingRange;
 
-	public void HoldFire()
-	{
-		CancelInvoke(nameof(Fire));
-	}
-
+	[Task]
 	private void Fire()
 	{
-		Instantiate(ball, fireTransform.position, fireTransform.rotation).GetComponent<Rigidbody>().AddForce(fireTransform.forward * 1500);
+		Instantiate(Ball, FireTransform.position, FireTransform.rotation).GetComponent<Rigidbody>().AddForce(FireTransform.forward * 2500);
+		Task.current.Succeed();
+	}
+	
+	[Task]
+	public void LookAtTarget()
+	{
+		var direction = Target.position - transform.position;
+
+		transform.rotation = Quaternion.Slerp(transform.rotation,
+			Quaternion.LookRotation(direction),
+			Time.deltaTime * RotationSpeed);
+        
+		var angle = Vector3.Angle(transform.forward, direction);
+
+		if(angle < RotationAccuracy)
+		{
+			Task.current.Succeed();
+		}
+		else
+		{
+			Task.current.Fail();
+		}
+	}
+	
+	[Task]
+	public bool IsPlayerNear()
+	{
+		return (Target.position - transform.position).magnitude < ShootingRange;
 	}
 }

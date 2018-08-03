@@ -1,0 +1,7 @@
+tree("Root")
+    while IsPlayerNear
+        sequence
+            LookAtTarget
+            sequence
+                Wait(1.5)
+                Fire
