@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
 
 // ReSharper disable once InconsistentNaming
 public class AIShipScript : MonoBehaviour
@@ -18,6 +19,7 @@ public class AIShipScript : MonoBehaviour
 	public float Power;
 	public GameManager GameManager;
 	private bool _dead;
+	public Slider HealthBar;
 
 	private void Start ()
 	{
@@ -25,6 +27,7 @@ public class AIShipScript : MonoBehaviour
 		_player = GameObject.FindGameObjectWithTag("Player");
 		_rotatingDirection = 0;
 		CurrentHealth = MaxHealth;
+		HealthBar.value = MaxHealth;
 		_dead = false;
 	}
 
@@ -77,6 +80,7 @@ public class AIShipScript : MonoBehaviour
 		if (other.gameObject.CompareTag("ball"))
 		{
 			CurrentHealth -= 10;
+			HealthBar.value = CurrentHealth / MaxHealth;
 		}
 		if (CurrentHealth > 0 || _dead) return;
 		GameManager.EnemyDead();

@@ -75,6 +75,7 @@ public class PlayerController : MonoBehaviour {
 		else if (Time.time / 60 == 0)
 		{
 			CurrentHealth++;
+			HealthBar.value = CurrentHealth / MaxHealth;
 		}
 	}
 

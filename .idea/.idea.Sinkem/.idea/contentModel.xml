@@ -6,6 +6,7 @@
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="EnemyHealthScript.cs" t="Include" />
         <e p="Island" t="Include">
           <e p="Scripts" t="Include">
             <e p="CharacterMovement.cs" t="Include" />
@@ -82,7 +83,6 @@
           <e p="AIShipScript.cs" t="Include" />
           <e p="BallScript.cs" t="Include" />
           <e p="CameraFollowScript.cs" t="Include" />
-          <e p="CursorController.cs" t="Include" />
           <e p="GameManager.cs" t="Include" />
           <e p="PlayerController.cs" t="Include" />
           <e p="ShootCannonScript.cs" t="Include" />
