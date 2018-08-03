@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8c8a329f-eb10-4578-a83a-0b609751b4f0" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Island/Textures/Materials/Water.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Island/Textures/Materials/Water.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AIShipScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AIShipScript.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/USSC Brig Sloop/Materials and Meshes/1800early_BrigSloop/mat_1800early_BrigSloop 3.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/USSC Brig Sloop/Materials and Meshes/1800early_BrigSloop/mat_1800early_BrigSloop 3.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/USSC Brig Sloop/Materials and Meshes/1800early_BrigSloop/mat_1800early_BrigSloop 4.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/USSC Brig Sloop/Materials and Meshes/1800early_BrigSloop/mat_1800early_BrigSloop 4.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Victorian PBR Canon/Materials/Victorian_PBR_Cannon.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Victorian PBR Canon/Materials/Victorian_PBR_Cannon.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Island/Scripts/WaterScroller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Island/Scripts/WaterScroller.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Island/Textures/Materials/Waves.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Island/Textures/Materials/Waves.mat" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -48,11 +42,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AIShipScript.cs" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AIShipScript.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/AIShipScript.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="658">
-              <caret line="85" column="22" lean-forward="true" selection-start-line="85" selection-start-column="22" selection-end-line="85" selection-end-column="22" />
+            <state relative-caret-position="1230">
+              <caret line="85" column="22" selection-start-line="85" selection-start-column="22" selection-end-line="85" selection-end-column="22" />
               <folding>
                 <marker date="1533291113895" expanded="false" signature="6:100" ph="..." />
                 <marker date="1533291113895" expanded="true" signature="143:2226" ph="{...}" />
@@ -73,11 +67,26 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="WaterScroller.cs" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/Island/Scripts/WaterScroller.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="375">
+              <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+              <folding>
+                <marker date="1533296654639" expanded="true" signature="6:78" ph="..." />
+                <marker date="1533296654639" expanded="true" signature="123:584" ph="{...}" />
+                <marker date="1533296654639" expanded="true" signature="254:332" ph="{...}" />
+                <marker date="1533296654639" expanded="true" signature="351:582" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="GameManager.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/GameManager.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="660">
-              <caret line="70" selection-start-line="70" selection-end-line="70" />
+            <state relative-caret-position="615">
+              <caret line="67" column="9" selection-start-line="67" selection-start-column="9" selection-end-line="67" selection-end-column="9" />
               <folding>
                 <marker date="1533290874236" expanded="false" signature="6:177" ph="..." />
                 <marker date="1533290874236" expanded="true" signature="219:1344" ph="{...}" />
@@ -130,11 +139,11 @@
         <option value="$PROJECT_DIR$/Assembly-CSharp-Editor.csproj" />
         <option value="$PROJECT_DIR$/Assets/BallScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/BallScript.cs" />
-        <option value="$PROJECT_DIR$/Assets/Island/Scripts/WaterScroller.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ShootCannonScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AIShipScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Island/Scripts/WaterScroller.cs" />
       </list>
     </option>
   </component>
@@ -218,12 +227,12 @@
       <workItem from="1533110984535" duration="1161000" />
       <workItem from="1533113309248" duration="13031000" />
       <workItem from="1533202222590" duration="16289000" />
-      <workItem from="1533281126529" duration="6183000" />
+      <workItem from="1533281126529" duration="7790000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48640000" />
+    <option name="totallyTimeSpent" value="50247000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -416,10 +425,10 @@
         <state relative-caret-position="150">
           <caret line="12" column="15" selection-start-line="12" selection-start-column="15" selection-end-line="12" selection-end-column="15" />
           <folding>
-            <marker date="1533129260779" expanded="false" signature="6:78" ph="..." />
-            <marker date="1533129260779" expanded="true" signature="123:549" ph="{...}" />
-            <marker date="1533129260779" expanded="true" signature="231:370" ph="{...}" />
-            <marker date="1533129260779" expanded="true" signature="388:547" ph="{...}" />
+            <marker date="1533296654639" expanded="true" signature="6:78" ph="..." />
+            <marker date="1533296654639" expanded="true" signature="123:584" ph="{...}" />
+            <marker date="1533296654639" expanded="true" signature="254:332" ph="{...}" />
+            <marker date="1533296654639" expanded="true" signature="351:582" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -466,19 +475,6 @@
     <entry file="file://$PROJECT_DIR$/Assets/Island/Scripts/FixedTiling.cs">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Island/Scripts/WaterScroller.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-          <folding>
-            <marker date="1533129260779" expanded="false" signature="6:78" ph="..." />
-            <marker date="1533129260779" expanded="true" signature="123:549" ph="{...}" />
-            <marker date="1533129260779" expanded="true" signature="231:370" ph="{...}" />
-            <marker date="1533129260779" expanded="true" signature="388:547" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/ShootCannonScript.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
@@ -491,28 +487,6 @@
             <marker date="1533137338015" expanded="true" signature="333:380" ph="{...}" />
             <marker date="1533137338015" expanded="true" signature="405:441" ph="{...}" />
             <marker date="1533137338015" expanded="true" signature="463:603" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/GameManager.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="70" selection-start-line="70" selection-end-line="70" />
-          <folding>
-            <marker date="1533290874236" expanded="false" signature="6:177" ph="..." />
-            <marker date="1533290874236" expanded="true" signature="219:1344" ph="{...}" />
-            <marker date="1533290874236" expanded="true" signature="352:429" ph="{...}" />
-            <marker date="1533290874236" expanded="true" signature="452:588" ph="{...}" />
-            <marker date="1533290874236" expanded="true" signature="504:582" ph="{...}" />
-            <marker date="1533290874236" expanded="true" signature="632:750" ph="{...}" />
-            <marker date="1533290874236" expanded="true" signature="774:814" ph="{...}" />
-            <marker date="1533290874236" expanded="true" signature="844:881" ph="{...}" />
-            <marker date="1533290874236" expanded="true" signature="919:998" ph="{...}" />
-            <marker date="1533290874236" expanded="true" signature="1032:1210" ph="{...}" />
-            <marker date="1533290874236" expanded="true" signature="1108:1160" ph="{...}" />
-            <marker date="1533290874236" expanded="true" signature="1239:1342" ph="{...}" />
-            <marker date="1533290874236" expanded="true" signature="1290:1336" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -545,8 +519,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/AIShipScript.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="658">
-          <caret line="85" column="22" lean-forward="true" selection-start-line="85" selection-start-column="22" selection-end-line="85" selection-end-column="22" />
+        <state relative-caret-position="1230">
+          <caret line="85" column="22" selection-start-line="85" selection-start-column="22" selection-end-line="85" selection-end-column="22" />
           <folding>
             <marker date="1533291113895" expanded="false" signature="6:100" ph="..." />
             <marker date="1533291113895" expanded="true" signature="143:2226" ph="{...}" />
@@ -562,6 +536,41 @@
             <marker date="1533291113895" expanded="true" signature="2016:2224" ph="{...}" />
             <marker date="1533291113895" expanded="true" signature="2062:2094" ph="{...}" />
             <marker date="1533291113895" expanded="true" signature="2140:2221" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/GameManager.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="615">
+          <caret line="67" column="9" selection-start-line="67" selection-start-column="9" selection-end-line="67" selection-end-column="9" />
+          <folding>
+            <marker date="1533290874236" expanded="false" signature="6:177" ph="..." />
+            <marker date="1533290874236" expanded="true" signature="219:1344" ph="{...}" />
+            <marker date="1533290874236" expanded="true" signature="352:429" ph="{...}" />
+            <marker date="1533290874236" expanded="true" signature="452:588" ph="{...}" />
+            <marker date="1533290874236" expanded="true" signature="504:582" ph="{...}" />
+            <marker date="1533290874236" expanded="true" signature="632:750" ph="{...}" />
+            <marker date="1533290874236" expanded="true" signature="774:814" ph="{...}" />
+            <marker date="1533290874236" expanded="true" signature="844:881" ph="{...}" />
+            <marker date="1533290874236" expanded="true" signature="919:998" ph="{...}" />
+            <marker date="1533290874236" expanded="true" signature="1032:1210" ph="{...}" />
+            <marker date="1533290874236" expanded="true" signature="1108:1160" ph="{...}" />
+            <marker date="1533290874236" expanded="true" signature="1239:1342" ph="{...}" />
+            <marker date="1533290874236" expanded="true" signature="1290:1336" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Island/Scripts/WaterScroller.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+          <folding>
+            <marker date="1533296654639" expanded="true" signature="6:78" ph="..." />
+            <marker date="1533296654639" expanded="true" signature="123:584" ph="{...}" />
+            <marker date="1533296654639" expanded="true" signature="254:332" ph="{...}" />
+            <marker date="1533296654639" expanded="true" signature="351:582" ph="{...}" />
           </folding>
         </state>
       </provider>
