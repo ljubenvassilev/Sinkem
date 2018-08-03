@@ -82,6 +82,7 @@ public class PlayerController : MonoBehaviour {
 		while (true){
 			if (currentHealth < maxHealth){
 				currentHealth++;
+				healthBar.value = currentHealth / maxHealth;
 				yield return new WaitForSeconds(1);
 			} else yield return null;
 		}
