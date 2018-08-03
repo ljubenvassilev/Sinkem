@@ -1,25 +1,26 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class WaterScroller : MonoBehaviour 
-{	
-	public float scrollSpeed = 0.1f;
-	public Camera cam;
-	private Material mat;
-	private Renderer renderer;
+namespace Island.Scripts
+{
+	public class WaterScroller : MonoBehaviour 
+	{	
+		public float ScrollSpeed = 0.1f;
+		public Camera Cam;
+		private Material _mat;
+		private new Renderer renderer;
+		private float _offset;
 
-	private void Start()
-	{
-		renderer = GetComponent<Renderer>();
-		mat = renderer.sharedMaterial;
-	}
+		private void Start()
+		{
+			renderer = GetComponent<Renderer>();
+			_mat = renderer.sharedMaterial;
+			Cam.depthTextureMode |= DepthTextureMode.Depth;
+		}
 	
-	void Update () {
-		if(renderer.material.shader.isSupported)
-			cam.depthTextureMode |= DepthTextureMode.Depth;
-		float offset = Time.time * scrollSpeed;
-		Vector2 k = new Vector2(offset / 10.0f, offset);
-		mat.SetTextureOffset ("_MainTex", k);
+		void Update () {
+			_offset = Time.time * ScrollSpeed;
+			Vector2 k = new Vector2(_offset / 10.0f, _offset);
+			_mat.SetTextureOffset ("_MainTex", k);
+		}
 	}
 }

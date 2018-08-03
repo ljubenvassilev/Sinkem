@@ -5,89 +5,89 @@ using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour {
 
-	private Rigidbody rigidBody;
-	public float speed;
-	public float rotationSpeed;
-	public GameObject ball;
-	public Transform[] shootLeft;
-	public Transform[] shootRight;
-	public float power;
-	public Slider healthBar;
-	public float maxHealth;
-	public float currentHealth;
-	private bool ableToShoot;
-	public GameManager gameManager;
-	private bool dead;
+	private Rigidbody _rigidBody;
+	public float Speed;
+	public float RotationSpeed;
+	public GameObject Ball;
+	public Transform[] ShootLeft;
+	public Transform[] ShootRight;
+	public float Power;
+	public Slider HealthBar;
+	public float MaxHealth;
+	public float CurrentHealth;
+	private bool _ableToShoot;
+	public GameManager GameManager;
+	private bool _dead;
         
 	void Start()
 	{
-		rigidBody = GetComponent<Rigidbody>();
-		currentHealth = maxHealth;
-		healthBar.value = maxHealth;
+		_rigidBody = GetComponent<Rigidbody>();
+		CurrentHealth = MaxHealth;
+		HealthBar.value = MaxHealth;
 		StartCoroutine(nameof(Regenerate));
-		ableToShoot = true;
-		dead = false;
+		_ableToShoot = true;
+		_dead = false;
 	}
 
 	private void FixedUpdate()
 	{
-		rigidBody.MovePosition(rigidBody.position + transform.forward * Input.GetAxis("Vertical") * Time.deltaTime * speed);
-		rigidBody.MoveRotation(rigidBody.rotation * Quaternion.Euler(0f, Input.GetAxis("Horizontal") * Time.deltaTime * rotationSpeed, 0f));
-		if (ableToShoot)
+		_rigidBody.MovePosition(_rigidBody.position + transform.forward * Input.GetAxis("Vertical") * Time.deltaTime * Speed);
+		_rigidBody.MoveRotation(_rigidBody.rotation * Quaternion.Euler(0f, Input.GetAxis("Horizontal") * Time.deltaTime * RotationSpeed, 0f));
+		if (_ableToShoot)
 		{
 			if (Input.GetKeyDown(KeyCode.J))
 			{
-				StartCoroutine(Fire(shootLeft));
+				StartCoroutine(Fire(ShootLeft));
 			}
 			else if (Input.GetKeyDown(KeyCode.K))
 			{
-				StartCoroutine(Fire(shootRight));
+				StartCoroutine(Fire(ShootRight));
 			}
 		}
 	}
 
 	private IEnumerator Fire(IEnumerable<Transform> firePositions)
 	{
-		ableToShoot = false;
+		_ableToShoot = false;
 		foreach (var t in firePositions)
 		{
-			Instantiate(ball, t.position, t.localRotation).GetComponent<Rigidbody>().AddForce(t.forward * power);
+			Instantiate(Ball, t.position, t.localRotation).GetComponent<Rigidbody>().AddForce(t.forward * Power);
 		}
 		yield return new WaitForSeconds(2);
-		ableToShoot = true;
+		_ableToShoot = true;
 	}
 
 	private void OnTriggerEnter(Collider other)
 	{
 		if (!other.CompareTag("ball")) return;
-		currentHealth -= 5;
-		healthBar.value = currentHealth / maxHealth;
+		CurrentHealth -= 5;
+		HealthBar.value = CurrentHealth / MaxHealth;
 	}
 
 	private void Update()
 	{
-		if (currentHealth <= 0 && !dead)
+		if (CurrentHealth <= 0 && !_dead)
 		{
-			dead = true;
+			_dead = true;
 			Die();
 		}
 		// ReSharper disable once CompareOfFloatsByEqualityOperator
 		else if (Time.time / 60 == 0)
 		{
-			currentHealth++;
+			CurrentHealth++;
 		}
 	}
 
 	private void Die()
 	{
-		gameManager.ShowPanel(2);
+		GameManager.ShowPanel(2);
 	}
 
 	private IEnumerator Regenerate(){
 		while (true){
-			if (currentHealth < maxHealth){
-				currentHealth++;
-				healthBar.value = currentHealth / maxHealth;
+			if (CurrentHealth < MaxHealth){
+				CurrentHealth++;
+				HealthBar.value = CurrentHealth / MaxHealth;
 				yield return new WaitForSeconds(1);
 			} else yield return null;
 		}

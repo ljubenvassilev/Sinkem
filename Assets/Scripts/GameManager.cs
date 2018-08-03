@@ -1,36 +1,31 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.Experimental.Rendering;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
+// ReSharper disable UnusedMember.Global
 
 public class GameManager : MonoBehaviour
 {
-    private static float originalTimeScale;
-    public GameObject[] panels;
-    private int enemies;
+    private static float _originalTimeScale;
+    public GameObject[] Panels;
+    private int _enemies;
     
     private void Start()
     {
-        originalTimeScale = Time.timeScale;
-        enemies = 3;
+        _originalTimeScale = Time.timeScale;
+        _enemies = 3;
     }
-    
-    void Update()
+
+    private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            Time.timeScale = 0;
-            ShowPanel(0);
-        }
+        if (!Input.GetKeyDown(KeyCode.Escape)) return;
+        Time.timeScale = 0;
+        ShowPanel(0);
     }
     
-    public void LoadLevel(string name)
+    public void LoadLevel(string sceneName)
     {
         HideAllPanels();
-        SceneManager.LoadScene(name, LoadSceneMode.Single);
-        enemies = 3;
+        SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
+        _enemies = 3;
     }
 
     public void Quit()
@@ -46,23 +41,23 @@ public class GameManager : MonoBehaviour
     public void ShowPanel(int panel)
     {
         Time.timeScale = 0;
-        panels[panel].SetActive(true);
+        Panels[panel].SetActive(true);
     }
 
     private void HideAllPanels()
     {
-        if (panels == null) return;
-        foreach (var t in panels)
+        if (Panels == null) return;
+        foreach (var t in Panels)
         {
             t.SetActive(false);
         }
-        Time.timeScale = originalTimeScale;
+        Time.timeScale = _originalTimeScale;
     }
 
     public void EnemyDead()
     {
-        enemies--;
-        if (enemies <= 0)
+        _enemies--;
+        if (_enemies <= 0)
         {
             ShowPanel(1);
         }

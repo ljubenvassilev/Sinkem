@@ -1972,28 +1972,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5edd35dca6c61349a8e841ba88cf2ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chaseDistance: 200
-  shootDistance: 100
-  rotationSpeed: 5
-  maxHealth: 100
-  currentHealth: 0
-  leftFireTransforms:
+  ChaseDistance: 250
+  ShootDistance: 70
+  RotationSpeed: 15
+  MaxHealth: 100
+  CurrentHealth: 100
+  LeftFireTransforms:
   - {fileID: 430296383}
   - {fileID: 2009638783}
   - {fileID: 1983219633}
   - {fileID: 449589967}
   - {fileID: 45979615}
   - {fileID: 1911427659}
-  rightFireTransforms:
+  RightFireTransforms:
   - {fileID: 1422492700}
   - {fileID: 846736147}
   - {fileID: 522834941}
   - {fileID: 976867760}
   - {fileID: 1470508585}
   - {fileID: 247752461}
-  ball: {fileID: 1347180618071018, guid: 5c7b825f2a53177459b2662c675d4e43, type: 2}
-  power: 1500
-  gameManager: {fileID: 1612661463}
+  Ball: {fileID: 1347180618071018, guid: 5c7b825f2a53177459b2662c675d4e43, type: 2}
+  Power: 1500
+  GameManager: {fileID: 1612661463}
 --- !u!195 &72165366
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -8117,8 +8117,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8712f8770149ec94c99bfa70c441887f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scrollSpeed: 3
-  cam: {fileID: 550861389}
+  ScrollSpeed: 3
+  Cam: {fileID: 550861389}
 --- !u!114 &134718974
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14858,8 +14858,8 @@ GameObject:
   - component: {fileID: 421975083}
   - component: {fileID: 421975084}
   - component: {fileID: 421975085}
-  - component: {fileID: 421975086}
   - component: {fileID: 421975087}
+  - component: {fileID: 421975086}
   m_Layer: 0
   m_Name: Enemy1
   m_TagString: Untagged
@@ -14947,28 +14947,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5edd35dca6c61349a8e841ba88cf2ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chaseDistance: 200
-  shootDistance: 100
-  rotationSpeed: 5
-  maxHealth: 100
-  currentHealth: 0
-  leftFireTransforms:
+  ChaseDistance: 200
+  ShootDistance: 80
+  RotationSpeed: 20
+  MaxHealth: 100
+  CurrentHealth: 100
+  LeftFireTransforms:
   - {fileID: 424332639}
   - {fileID: 118111505}
   - {fileID: 758634901}
   - {fileID: 1931981422}
   - {fileID: 1265284754}
   - {fileID: 606193349}
-  rightFireTransforms:
+  RightFireTransforms:
   - {fileID: 167125114}
   - {fileID: 1231345666}
   - {fileID: 35130774}
   - {fileID: 728276166}
   - {fileID: 739085288}
   - {fileID: 2112281126}
-  ball: {fileID: 1347180618071018, guid: 5c7b825f2a53177459b2662c675d4e43, type: 2}
-  power: 1500
-  gameManager: {fileID: 1612661463}
+  Ball: {fileID: 1347180618071018, guid: 5c7b825f2a53177459b2662c675d4e43, type: 2}
+  Power: 1500
+  GameManager: {fileID: 1612661463}
 --- !u!1 &424332638
 GameObject:
   m_ObjectHideFlags: 0
@@ -27814,8 +27814,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3f8779d9fe9e134c938006d2a82461a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fireTransform: {fileID: 0}
-  ball: {fileID: 0}
+  fireTransform: {fileID: 942401088}
+  ball: {fileID: 1347180618071018, guid: 5c7b825f2a53177459b2662c675d4e43, type: 2}
 --- !u!1 &1088028079
 GameObject:
   m_ObjectHideFlags: 0
@@ -37914,28 +37914,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96263fe436f28d64fac9cb6dd7fb9729, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 20
-  rotationSpeed: 40
-  ball: {fileID: 1347180618071018, guid: 5c7b825f2a53177459b2662c675d4e43, type: 2}
-  shootLeft:
+  Speed: 20
+  RotationSpeed: 40
+  Ball: {fileID: 1347180618071018, guid: 5c7b825f2a53177459b2662c675d4e43, type: 2}
+  ShootLeft:
   - {fileID: 450703691}
   - {fileID: 691875557}
   - {fileID: 694338090}
   - {fileID: 1998797637}
   - {fileID: 1495091649}
   - {fileID: 1747783256}
-  shootRight:
+  ShootRight:
   - {fileID: 1591613903}
   - {fileID: 1293911002}
   - {fileID: 304642317}
   - {fileID: 22863668}
   - {fileID: 2015197670}
   - {fileID: 526909457}
-  power: 1500
-  healthBar: {fileID: 656277858}
-  maxHealth: 200
-  currentHealth: 0
-  gameManager: {fileID: 1612661463}
+  Power: 1500
+  HealthBar: {fileID: 656277858}
+  MaxHealth: 200
+  CurrentHealth: 200
+  GameManager: {fileID: 1612661463}
 --- !u!65 &1543761970
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -39590,10 +39590,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef08df22bfceda145ba7d49a0135f7bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  panels:
+  Panels:
   - {fileID: 1992599189}
-  - {fileID: 1554391964}
   - {fileID: 1957440243}
+  - {fileID: 1554391964}
 --- !u!4 &1612661464
 Transform:
   m_ObjectHideFlags: 0
@@ -53519,8 +53519,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8712f8770149ec94c99bfa70c441887f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scrollSpeed: 3
-  cam: {fileID: 550861389}
+  ScrollSpeed: 3
+  Cam: {fileID: 550861389}
 --- !u!114 &2009103208
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -54164,28 +54164,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5edd35dca6c61349a8e841ba88cf2ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chaseDistance: 200
-  shootDistance: 100
-  rotationSpeed: 5
-  maxHealth: 100
-  currentHealth: 0
-  leftFireTransforms:
+  ChaseDistance: 170
+  ShootDistance: 90
+  RotationSpeed: 25
+  MaxHealth: 100
+  CurrentHealth: 100
+  LeftFireTransforms:
   - {fileID: 889219141}
   - {fileID: 1109638067}
   - {fileID: 1522376341}
   - {fileID: 2069365920}
   - {fileID: 476931902}
   - {fileID: 998535242}
-  rightFireTransforms:
+  RightFireTransforms:
   - {fileID: 1904400926}
   - {fileID: 1203510859}
   - {fileID: 1125280225}
   - {fileID: 846535809}
   - {fileID: 1764484197}
   - {fileID: 893791630}
-  ball: {fileID: 1347180618071018, guid: 5c7b825f2a53177459b2662c675d4e43, type: 2}
-  power: 1500
-  gameManager: {fileID: 1612661463}
+  Ball: {fileID: 1347180618071018, guid: 5c7b825f2a53177459b2662c675d4e43, type: 2}
+  Power: 1500
+  GameManager: {fileID: 1612661463}
 --- !u!195 &2026141747
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -54362,8 +54362,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8712f8770149ec94c99bfa70c441887f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scrollSpeed: 3
-  cam: {fileID: 550861389}
+  ScrollSpeed: 3
+  Cam: {fileID: 550861389}
 --- !u!114 &2032365348
 MonoBehaviour:
   m_ObjectHideFlags: 0
