@@ -2310,6 +2310,11 @@ Prefab:
       propertyPath: Cam
       value: 
       objectReference: {fileID: 535356122}
+    - target: {fileID: 114218260579059578, guid: d1f03074e612bbd4b84736d2d7aee882,
+        type: 2}
+      propertyPath: ScrollSpeed
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1f03074e612bbd4b84736d2d7aee882, type: 2}
   m_IsPrefabAsset: 0

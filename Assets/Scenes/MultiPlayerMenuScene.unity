@@ -1107,6 +1107,16 @@ Prefab:
       propertyPath: cam
       value: 
       objectReference: {fileID: 623105787}
+    - target: {fileID: 114218260579059578, guid: d1f03074e612bbd4b84736d2d7aee882,
+        type: 2}
+      propertyPath: ScrollSpeed
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114218260579059578, guid: d1f03074e612bbd4b84736d2d7aee882,
+        type: 2}
+      propertyPath: Cam
+      value: 
+      objectReference: {fileID: 623105787}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1f03074e612bbd4b84736d2d7aee882, type: 2}
   m_IsPrefabAsset: 0
@@ -2239,7 +2249,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef08df22bfceda145ba7d49a0135f7bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  panel: {fileID: 0}
+  Panels: []
 --- !u!4 &1159936443
 Transform:
   m_ObjectHideFlags: 0

@@ -82,6 +82,7 @@
           <e p="AIShipScript.cs" t="Include" />
           <e p="BallScript.cs" t="Include" />
           <e p="CameraFollowScript.cs" t="Include" />
+          <e p="CursorController.cs" t="Include" />
           <e p="GameManager.cs" t="Include" />
           <e p="PlayerController.cs" t="Include" />
           <e p="ShootCannonScript.cs" t="Include" />
