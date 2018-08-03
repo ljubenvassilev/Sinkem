@@ -16,6 +16,8 @@ public class PlayerController : MonoBehaviour {
 	public float maxHealth;
 	public float currentHealth;
 	private bool ableToShoot;
+	public GameManager gameManager;
+	private bool dead;
         
 	void Start()
 	{
@@ -24,6 +26,7 @@ public class PlayerController : MonoBehaviour {
 		healthBar.value = maxHealth;
 		StartCoroutine(nameof(Regenerate));
 		ableToShoot = true;
+		dead = false;
 	}
 
 	private void FixedUpdate()
@@ -63,10 +66,12 @@ public class PlayerController : MonoBehaviour {
 
 	private void Update()
 	{
-		if (currentHealth <= 0)
+		if (currentHealth <= 0 && !dead)
 		{
+			dead = true;
 			Die();
 		}
+		// ReSharper disable once CompareOfFloatsByEqualityOperator
 		else if (Time.time / 60 == 0)
 		{
 			currentHealth++;
@@ -75,7 +80,7 @@ public class PlayerController : MonoBehaviour {
 
 	private void Die()
 	{
-		
+		gameManager.ShowPanel(2);
 	}
 
 	private IEnumerator Regenerate(){

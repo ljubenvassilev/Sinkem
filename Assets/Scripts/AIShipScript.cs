@@ -16,6 +16,8 @@ public class AIShipScript : MonoBehaviour
 	public Transform[] rightFireTransforms;
 	public GameObject ball;
 	public float power;
+	public GameManager gameManager;
+	private bool dead;
 
 	void Start ()
 	{
@@ -23,7 +25,7 @@ public class AIShipScript : MonoBehaviour
 		player = GameObject.FindGameObjectWithTag("Player");
 		rotatingDirection = 0;
 		currentHealth = maxHealth;
-		StartCoroutine(nameof(Regenerate));
+		dead = false;
 	}
 
 	private void Update()
@@ -63,29 +65,25 @@ public class AIShipScript : MonoBehaviour
 
 	private void Shoot()
 	{
-		Debug.Log("SHOOT");
 		IEnumerable<Transform> firePositions = rotatingDirection == 1 ? leftFireTransforms : rightFireTransforms;
 		foreach (var t in firePositions)
 		{
 			Instantiate(ball, t.position, t.localRotation).GetComponent<Rigidbody>().AddForce(t.forward * power);
 		}
 	}
-	
-	private IEnumerator Regenerate(){
-		while (true){
-			if (currentHealth < maxHealth){
-				currentHealth++;
-				yield return new WaitForSeconds(1);
-			} else yield return null;
-		}
-		// ReSharper disable once IteratorNeverReturns
-	}
 
-	private void OnCollisionEnter(Collision other)
+	private void OnTriggerEnter(Collider other)
 	{
 		if (other.gameObject.CompareTag("ball"))
 		{
 			currentHealth -= 10;
+		}
+		if (currentHealth > 0) return;
+		if (!dead)
+		{
+			gameManager.EnemyDead();
+			Destroy(this.gameObject);
+			dead = true;
 		}
 	}
 }
