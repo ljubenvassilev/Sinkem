@@ -11,6 +11,8 @@ public class PlayerController : MonoBehaviour {
 	public GameObject Ball;
 	public Transform[] ShootLeft;
 	public Transform[] ShootRight;
+	public GameObject LeftShootEffects;
+	public GameObject RightShootEffects;
 	public float Power;
 	public Slider HealthBar;
 	public float MaxHealth;
@@ -18,6 +20,8 @@ public class PlayerController : MonoBehaviour {
 	private bool _ableToShoot;
 	public GameManager GameManager;
 	private bool _dead;
+	private ParticleSystem[] _leftEffects;
+	private ParticleSystem[] _rightEffects;
         
 	void Start()
 	{
@@ -27,6 +31,8 @@ public class PlayerController : MonoBehaviour {
 		StartCoroutine(nameof(Regenerate));
 		_ableToShoot = true;
 		_dead = false;
+		_leftEffects = LeftShootEffects.GetComponentsInChildren<ParticleSystem>();
+		_rightEffects = RightShootEffects.GetComponentsInChildren<ParticleSystem>();
 	}
 
 	private void FixedUpdate()
@@ -37,21 +43,26 @@ public class PlayerController : MonoBehaviour {
 		{
 			if (Input.GetKeyDown(KeyCode.J))
 			{
-				StartCoroutine(Fire(ShootLeft));
+				StartCoroutine(Fire(ShootLeft, _leftEffects));
 			}
 			else if (Input.GetKeyDown(KeyCode.K))
 			{
-				StartCoroutine(Fire(ShootRight));
+				StartCoroutine(Fire(ShootRight, _rightEffects));
 			}
 		}
 	}
 
-	private IEnumerator Fire(IEnumerable<Transform> firePositions)
+	private IEnumerator Fire(IEnumerable<Transform> firePositions, IEnumerable<ParticleSystem> effectParticleSystems)
 	{
 		_ableToShoot = false;
 		foreach (var t in firePositions)
 		{
 			Instantiate(Ball, t.position, t.localRotation).GetComponent<Rigidbody>().AddForce(t.forward * Power);
+		}
+
+		foreach (var system in effectParticleSystems)
+		{
+			system.Play();
 		}
 		yield return new WaitForSeconds(2);
 		_ableToShoot = true;

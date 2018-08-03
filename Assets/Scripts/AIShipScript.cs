@@ -20,6 +20,10 @@ public class AIShipScript : MonoBehaviour
 	public GameManager GameManager;
 	private bool _dead;
 	public Slider HealthBar;
+	private ParticleSystem[] _leftEffects;
+	private ParticleSystem[] _rightEffects;
+	public GameObject LeftShootEffects;
+	public GameObject RightShootEffects;
 
 	private void Start ()
 	{
@@ -29,6 +33,8 @@ public class AIShipScript : MonoBehaviour
 		CurrentHealth = MaxHealth;
 		HealthBar.value = MaxHealth;
 		_dead = false;
+		_leftEffects = LeftShootEffects.GetComponentsInChildren<ParticleSystem>();
+		_rightEffects = RightShootEffects.GetComponentsInChildren<ParticleSystem>();
 	}
 
 	private void Update()
@@ -69,9 +75,15 @@ public class AIShipScript : MonoBehaviour
 	private void Shoot()
 	{
 		IEnumerable<Transform> firePositions = _rotatingDirection == 1 ? LeftFireTransforms : RightFireTransforms;
+		IEnumerable<ParticleSystem> effects = _rotatingDirection == 1 ? _leftEffects : _rightEffects;
 		foreach (var t in firePositions)
 		{
 			Instantiate(Ball, t.position, t.localRotation).GetComponent<Rigidbody>().AddForce(t.forward * Power);
+		}
+
+		foreach (var effect in effects)
+		{
+			effect.Play();
 		}
 	}
 
