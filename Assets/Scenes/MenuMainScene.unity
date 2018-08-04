@@ -2315,7 +2315,9 @@ Prefab:
       propertyPath: ScrollSpeed
       value: 0.5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114182925583747938, guid: d1f03074e612bbd4b84736d2d7aee882, type: 2}
+    - {fileID: 114218260579059578, guid: d1f03074e612bbd4b84736d2d7aee882, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: d1f03074e612bbd4b84736d2d7aee882, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &2050547914
