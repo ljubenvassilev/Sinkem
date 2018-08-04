@@ -102,18 +102,17 @@
         <e p="Scripts" t="Include">
           <e p="AIShipScript.cs" t="Include" />
           <e p="BallScript.cs" t="Include" />
+          <e p="BehaviourScripts" t="Include">
+            <e p="AimBehaviour.cs" t="Include" />
+            <e p="CannonBehaviour.cs" t="Include" />
+            <e p="RotateBehaviour.cs" t="Include" />
+            <e p="ShootBehaviour.cs" t="Include" />
+          </e>
           <e p="CameraFollowScript.cs" t="Include" />
           <e p="EnemyHealthScript.cs" t="Include" />
           <e p="GameManager.cs" t="Include" />
           <e p="PandaBTScripts" t="Include">
-            <e p="Attack.BT.txt" t="Include" />
             <e p="Cannon.txt" t="Include" />
-            <e p="LookAround.BT.txt" t="Include" />
-            <e p="Patrol.BT.txt" t="Include" />
-            <e p="RobotGuardAi.BT.txt" t="Include" />
-            <e p="RunAway.BT.txt" t="Include" />
-            <e p="Status.BT.txt" t="Include" />
-            <e p="Travel.BT.txt" t="Include" />
           </e>
           <e p="PlayerController.cs" t="Include" />
           <e p="ShootCannonScript.cs" t="Include" />
